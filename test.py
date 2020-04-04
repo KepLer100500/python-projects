@@ -1,4 +1,6 @@
 from tkinter import *
+#from pyautogui import *
+import pyautogui
 
 def move():
     #x = root.winfo_pointerx() - root.winfo_rootx()
@@ -10,6 +12,7 @@ def move():
 
 # 1625 / 991
 root = Tk()
+pyautogui.moveTo(1625,991)
 l = Label(bg='white', fg='black', width=50)
 l.pack()
 #root.bind('<Motion>', move)
