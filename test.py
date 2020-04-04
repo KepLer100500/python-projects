@@ -1,18 +1,19 @@
 from tkinter import *
 
-def move(event):
-    x = root.winfo_pointerx() - root.winfo_rootx()
-    y = root.winfo_pointery() - root.winfo_rooty()
-    test = str(x) + " " + str(y)
-    #test = root.winfo_pointerxy()
+def move():
+    #x = root.winfo_pointerx() - root.winfo_rootx()
+    #y = root.winfo_pointery() - root.winfo_rooty()
+    #test = str(x) + " " + str(y)
+    test = root.winfo_pointerxy()
     l['text'] = test
-
+    root.after(100,move)
 
 # 1625 / 991
 root = Tk()
 l = Label(bg='white', fg='black', width=50)
 l.pack()
-root.bind('<Motion>', move)
+#root.bind('<Motion>', move)
+move()
 root.mainloop()
 
 
