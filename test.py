@@ -4,6 +4,14 @@ import pyperclip
 import datetime
 
 def click():
+    """
+    crontab -e
+
+    DISPLAY=:1.0
+    XAUTHORITY=/home/pi/.Xauthority
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+    30 8 * * * python3 /home/pi/morning_clicker.py
+    """
     time.sleep(2)
     pyautogui.click(100, 20)   # chrome button
     time.sleep(5)
@@ -28,16 +36,6 @@ def click():
     time.sleep(2)
     pyautogui.click(1137,489) # accept button
     time.sleep(2)
-    a = datetime.datetime.today()
-    print(a.day,'-',a.month,'-',a.year,' ',a.hour, ':',a.minute, ':',a.second,sep='')  # success printing time
-    return 1
 
 pyautogui.FAILSAFE = False
-flag = 0
-while(1):
-    a = datetime.datetime.today()
-    if(a.hour == 8 and a.minute == 30 and flag == 0):
-        flag = click()
-    elif(a.hour == 8 and a.minute == 31 and flag == 1):
-        flag = 0
-    time.sleep(1)
+click()
