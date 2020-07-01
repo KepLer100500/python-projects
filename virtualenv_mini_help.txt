@@ -1,7 +1,8 @@
-pip freeze # посмотреть список пакетов python
-pip install virtualenv # установить пакет virtualenv
+pip freeze                     # посмотреть список пакетов python
+pip install virtualenv         # установить пакет virtualenv
 cd 'proj_path'
-virtualenv venv # создать виртуальное окружение в папке с проектом
-source venv/bin/activate # активировать виртуальное окружение
-pip freeze > requirement.txt # сохранить текущий установленный список пакетов в файл
+virtualenv venv                # создать виртуальное окружение в папке с проектом
+source venv/bin/activate       # активировать виртуальное окружение (Linux)
+venv\Scripts\activate          # активировать виртуальное окружение (Windows)
+pip freeze > requirement.txt   # сохранить текущий установленный список пакетов в файл
 pip install -r requirement.txt # установить все пакеты из файла
