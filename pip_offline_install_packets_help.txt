@@ -1,0 +1,14 @@
+pip3 freeze > packets.txt # Посмотреть список пакетов python
+
+'''                       # Примерный вид файла packets.txt
+beautifulsoup4==4.9.1
+lxml==4.5.2
+openpyxl==3.0.4
+requests==2.24.0
+selenium==3.141.0
+'''
+
+!!!Не забыть создать папку dist!!!
+
+pip3 download -r packets.txt --dest dist --only-binary :all: # Скачать файлы пакетов в папку dist
+pip3 install -r packets.txt --no-index -f dist # Оффлайн установка пакетов из файла packets.txt и из папки dist
