@@ -19,6 +19,7 @@ def is_simple(x):
 def main():
     import doctest
     doctest.testmod()
+    print(is_simple(int(input())))
 
 if __name__ == '__main__':
     main()
