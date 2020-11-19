@@ -38,5 +38,6 @@ def main():
     print(pt.coordY)
     del pt.coordY
 
+
 if __name__ == '__main__':
     main()

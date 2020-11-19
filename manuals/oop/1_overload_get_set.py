@@ -1,8 +1,8 @@
 class Point:
     def __init__(self, x=0, y=0, z=500):
-        self.__x = x # set defalut value
-        self.__y = y # set default value
-        self.__z = z # here also call __setattr__ function!
+        self.__x = x  # set defalut value
+        self.__y = y  # set default value
+        self.__z = z  # here also call __setattr__ function!
 
     def __checkValue(a):
         # check, entered value is int or is float?
@@ -44,15 +44,17 @@ class Point:
         # trying get non existent property
         return 'Variable ' + name + ' is not define in this class!!!'
 
+
 def main():
-    pt = Point() # create object
-    pt.setCoords(10, 30) # getter
-    print(pt.getCoords()) # setter
-    pt.setCoords('20', 50) # incorrect enter
-    print(pt.getZ()) # overload __getattribute__ method
-    print(pt._Point__z) # another overload __getattribute__ method
-    pt.setZ(100) # overload __setattr__ method
-    print(pt.www) # trying get non existent property
+    pt = Point()  # create object
+    pt.setCoords(10, 30)  # getter
+    print(pt.getCoords())  # setter
+    pt.setCoords('20', 50)  # incorrect enter
+    print(pt.getZ())  # overload __getattribute__ method
+    print(pt._Point__z)  # another overload __getattribute__ method
+    pt.setZ(100)  # overload __setattr__ method
+    print(pt.www)  # trying get non existent property
+
 
 if __name__ == '__main__':
     main()
